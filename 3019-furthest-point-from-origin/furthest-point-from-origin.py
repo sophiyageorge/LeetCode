@@ -1,4 +1,7 @@
 class Solution:
     def furthestDistanceFromOrigin(self, moves: str) -> int:
-     return   abs(moves.count('L')-moves.count('R'))+moves.count('_')
-        
+        L = moves.count('L')
+        R = moves.count('R')
+        under_score = moves.count('_')
+
+        return abs(R-L)+under_score
